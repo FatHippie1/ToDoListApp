@@ -1,6 +1,3 @@
-
-
-
 function displayTodo() {
     const inputElement = document.getElementById("todo-input");
     const text = inputElement.value;
