@@ -11,7 +11,7 @@ const makeTodo = todo => {
     const html =
         `<li class="list">
         <span> ${todo}</span>
-        <i class="fa-solid fa-landmark-dome delete"></i>
+        <i class="fa-regular fa-trash-can"></i>
         </li >
         `;
     list.innerHTML += html;
@@ -29,7 +29,7 @@ userInput.addEventListener('submit', e => {
 
 //delete
 list.addEventListener('click', e => {
-    if (e.target.classList.contains('delete')) {
+    if (e.target.classList.contains('fa-trash-can')) {
         e.target.parentElement.remove();
     }
 });
