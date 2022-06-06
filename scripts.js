@@ -1,17 +1,41 @@
-const userInput = document.getElementById('inputTodo');
-//const button = document.querySelector('button');
+const userInput = document.querySelector('.inputTodo');
+const list = document.querySelector('.todoList')
+/*const button = userInput.addEventListener('submit', e => {
+    e.preventDefault();
+    const todo = userInput.add.value;
+    console.log(todo);
+
+});//document.querySelector('.todoButton');//
+*/
+const makeTodo = todo => {
+    const html =
+        `<li class="list">
+        <span> ${todo}</span>
+        <i class="fa-solid fa-landmark-dome delete"></i>
+        </li >
+        `;
+    list.innerHTML += html;
+};
+
 
 userInput.addEventListener('submit', e => {
     e.preventDefault();
-    const todo = userInput.inputTodo.value;
-    console.log(todo);
+    const todo = userInput.add.value.trim();
+    //console.log(todo);
+    userInput.reset();
 
+    makeTodo(todo);
 });
 
-
+//delete
+list.addEventListener('click', e => {
+    if (e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
+    }
+});
 /*button.addEventListener('click', (e) => {
     e.preventDefault();
-    const todo = userInput.todoInput.value;
+    //const todo = userInput.todoInput.value;
     console.log(todo);
 });
 */
