@@ -5,6 +5,7 @@ const list = document.querySelector('.todoList')
 const makeTodo = todo => {
     const html =
         `<li class="list">
+        <input type="checkbox">
         <span> ${todo}</span>
         <i class="fa-regular fa-trash-can"></i>
         </li >
