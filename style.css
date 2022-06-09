@@ -12,6 +12,7 @@ body {
 }
 
 header {
+    font-family: koulen;
     font-size: 2rem;
 }
 
@@ -25,8 +26,12 @@ form {
     border: none;
 }
 
-li {
 
+
+table,
+li {
+    border: none;
+    padding-right: 0px;
     min-height: 5vh;
     display: flex;
     justify-content: center;
@@ -36,8 +41,27 @@ li {
 form input,
 form button {
     color: black;
+    background-color: transparent;
     padding: 0.25rem;
     font-size: 2rem;
     border: none;
-    background: darkgray;
+
+    /*background: darkgray;*/
 }
+
+button {
+    margin-left: 1rem;
+}
+
+form input {
+    border-style: solid;
+    border-color: black;
+    background-color: dimgray;
+    border-radius: 20px;
+}
+
+.radio::after {
+    background-color: darkgrey;
+}
+
+i {}
